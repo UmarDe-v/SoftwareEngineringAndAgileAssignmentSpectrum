@@ -2,7 +2,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-SQLALCHEMY_DATABASE_URL = "postgresql://postgres:us191001@localhost:5432/spectrum"
+#SQLALCHEMY_DATABASE_URL = "postgresql://postgres:us191001@localhost:5432/spectrum"
+SQLALCHEMY_DATABASE_URL = "postgresql://neondb_owner:npg_lE0hw7zOeNTR@ep-shy-meadow-a9slytfp-pooler.gwc.azure.neon.tech/neondb?sslmode=require&channel_binding=require"
+#this is hardcoded for testinb ut change it if needed currently using neon
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
