@@ -5,7 +5,7 @@ import uvicorn
 from app.routesFolder import Authentication
 from app.routesFolder import AdminOnly
 from app.routesFolder import UserOnly
-from app.routesFolder import testing
+#from app.routesFolder import testing
 
 from app import models
 from app.db import engine
@@ -49,7 +49,7 @@ models.Base.metadata.create_all(bind=engine)
 app.include_router(Authentication.router, prefix="/auth", tags=["General Authentication Routes"])
 app.include_router(AdminOnly.router, prefix="/admin", tags=["Admin Routes"])
 app.include_router(UserOnly.router, prefix="/user", tags=["user"])
-app.include_router(testing.router, prefix="/testing", tags=["testing"])
+#app.include_router(testing.router, prefix="/testing", tags=["testing"])
 
 #if token expired exception is raised, redirect to login page and delete the expired token cookie
 @app.exception_handler(TokenExpiredException)
