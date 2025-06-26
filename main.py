@@ -132,7 +132,7 @@ async def password_same_exception_handler(request: Request, exc: PasswordSame):
 async def password_same_exception_handler(request: Request, exc: NoSprectrumLicense):
     return JSONResponse(
         status_code=HTTP_400_BAD_REQUEST,
-        content={"detail": "No spectrium license found "}
+        content={"detail": "No spectrum license found "}
     )
 
 @app.exception_handler(InvalidEmailException)
